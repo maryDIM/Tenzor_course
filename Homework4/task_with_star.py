@@ -14,16 +14,16 @@
 def max_division_by_3(num):
     my_list = list(str(num))
     super_num = []
-    for _ in range(len(my_list)):
-        del_elem = my_list.pop(_)  # удалим элемент
-        for __ in range(9, -1, -1):
-            my_list.insert(_, str(__))  # на его место вставим элемент из последовательности (9, 0)
+    for i in range(len(my_list)):
+        del_elem = my_list.pop(i)  # удалим элемент
+        for j in range(9, -1, -1):
+            my_list.insert(i, str(j))  # на его место вставим элемент из последовательности (9, 0)
             new_num = ''.join(my_list)
             if len(new_num) == len(my_list) and (int(new_num) % 3 == 0) and (int(new_num) != num):
                 new_num = int(new_num)
                 super_num.append(int(new_num))
-            my_list.pop(_)
-        my_list.insert(_, del_elem)
+            my_list.pop(i)
+        my_list.insert(i, del_elem)
 
     new_num = max(super_num)
     return new_num

@@ -8,8 +8,8 @@
 
 def sum_digits(num):
     our_sum = 0
-    for _ in str(num):
-        our_sum += int(_)
+    for i in str(num):
+        our_sum += int(i)
     return our_sum
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

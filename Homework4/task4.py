@@ -11,9 +11,8 @@ def multiplication_chain(num):
     count_multy = 0
     while num // 10 != 0:
         our_multiplication = 1
-        print(str(num))
-        for _ in str(num):
-            our_multiplication *= int(_)
+        for i in str(num):
+            our_multiplication *= int(i)
         num = our_multiplication
         count_multy += 1
     return count_multy
